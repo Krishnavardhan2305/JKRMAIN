@@ -1,0 +1,438 @@
+[
+    {
+      "District": "Srikakulam",
+      "Constituencies": [
+        {
+          "No": 1,
+          "Name": "Ichchapuram",
+          "Mandals": ["Kanchili", "Ichchapuram", "Kaviti", "Sompeta"]
+        },
+        {
+          "No": 2,
+          "Name": "Palasa",
+          "Mandals": ["Palasa", "Mandasa", "Vajrapu Kotturu"]
+        },
+        {
+          "No": 3,
+          "Name": "Tekkali",
+          "Mandals": ["Nandigam", "Tekkali", "Santha Bommali", "Kotabommali"]
+        },
+        {
+          "No": 4,
+          "Name": "Pathapatnam",
+          "Mandals": ["Pathapatnam", "Meliaputti", "L. N. Peta", "Kothur", "Hiramandalam"]
+        },
+        {
+          "No": 5,
+          "Name": "Srikakulam",
+          "Mandals": ["Srikakulam", "Gara"]
+        },
+        {
+          "No": 6,
+          "Name": "Amadalavalasa",
+          "Mandals": ["Amudalavalasa", "Ponduru", "Sarubujjili", "Burja"]
+        },
+        {
+          "No": 7,
+          "Name": "Etcherla",
+          "Mandals": ["Etcherla", "Laveru", "Ranasthalam", "G.Sigadam"]
+        },
+        {
+          "No": 8,
+          "Name": "Narasannapeta",
+          "Mandals": ["Narasannapeta", "Jalumuru", "Saravakota", "Polaki"]
+        }
+      ]
+    },
+    {
+      "District": "Vizianagaram",
+      "Constituencies": [
+        {
+          "No": 9,
+          "Name": "Rajam (SC)",
+          "Mandals": ["Rajam", "Vangara", "Santhakaviti", "Regidi Amadalavalasa"]
+        },
+        {
+          "No": 14,
+          "Name": "Bobbili",
+          "Mandals": ["Bobbili", "Ramabhadrapuram", "Badangi", "Therlam"]
+        },
+        {
+          "No": 15,
+          "Name": "Cheepurupalli",
+          "Mandals": ["Cheepurupalli", "Garividi", "Gurla", "Merakamudidam"]
+        },
+        {
+          "No": 16,
+          "Name": "Gajapathinagaram",
+          "Mandals": ["Gajapathinagaram", "Bondapalli", "Gantyada", "Dattirajeru", "Jami"]
+        },
+        {
+          "No": 17,
+          "Name": "Nellimarla",
+          "Mandals": ["Nellimarla", "Poosapatirega", "Denkada", "Bhogapuram"]
+        },
+        {
+          "No": 18,
+          "Name": "Vizianagaram",
+          "Mandals": ["Vizianagaram"]
+        },
+        {
+          "No": 19,
+          "Name": "Srungavarapukota",
+          "Mandals": ["Srungavarapukota", "Lakkavarapukota", "Kothavalasa", "Vepada", "Jami"]
+        }
+      ]
+    },
+    {
+      "District": "Parvathipuram Manyam",
+      "Constituencies": [
+        {
+          "No": 10,
+          "Name": "Palakonda (ST)",
+          "Mandals": ["Palakonda", "Seethampeta", "Veeraghattam", "Bhamini"]
+        },
+        {
+          "No": 11,
+          "Name": "Kurupam (ST)",
+          "Mandals": ["Kurupam", "Gummalaxmipuram", "Jiyyammavalasa", "Komarada", "Garugubilli"]
+        },
+        {
+          "No": 12,
+          "Name": "Parvathipuram (SC)",
+          "Mandals": ["Parvathipuram", "Seethanagaram", "Balijipeta"]
+        },
+        {
+          "No": 13,
+          "Name": "Salur (ST)",
+          "Mandals": ["Salur", "Pachipenta", "Mentada", "Makkuva"]
+        }
+      ]
+    },
+    {
+      "District": "Visakhapatnam",
+      "Constituencies": [
+        {
+          "No": 20,
+          "Name": "Bhimili",
+          "Mandals": ["Bheemili", "Anandapuram", "Padmanabham", "Visakhapatnam Rural part"]
+        },
+        {
+          "No": 21,
+          "Name": "Visakhapatnam East",
+          "Mandals": ["Visakhapatnam (Urban) Mandal (Part) Visakhapatnam (M.Corp) Ward No. 1 to 11 and 53 to 55"]
+        },
+        {
+          "No": 22,
+          "Name": "Visakhapatnam South",
+          "Mandals": ["Visakhapatnam (Urban) Mandal (Part) Visakhapatnam (M.Corp) Ward No. 12 to 34, 42 to 43 and 46 to 48"]
+        },
+        {
+          "No": 23,
+          "Name": "Visakhapatnam North",
+          "Mandals": ["Visakhapatnam (Urban) Mandal (Part) Visakhapatnam (M.Corp) Ward No. 36 to 41, 44 to 45 and 49 to 52"]
+        },
+        {
+          "No": 24,
+          "Name": "Visakhapatnam West",
+          "Mandals": ["Visakhapatnam (M.Corp) Ward No. 35 and 56 to 71, of the Visakhapatnam (Urban) Mandal."]
+        },
+        {
+          "No": 25,
+          "Name": "Gajuwaka",
+          "Mandals": ["Gajuwaka", "Pedagantyada"]
+        }
+      ]
+    },
+    {
+      "District": "Anakapalli",
+      "Constituencies": [
+        {
+          "No": 26,
+          "Name": "Chodavaram",
+          "Mandals": ["Chodavaram", "Butchayyapeta", "Ravikamatham", "Rolugunta"]
+        },
+        {
+          "No": 27,
+          "Name": "Madugula",
+          "Mandals": ["Madugula", "Cheedikada", "Devarapalli", "K. Kotapadu"]
+        },
+        {
+          "No": 30,
+          "Name": "Anakapalli",
+          "Mandals": ["Anakapalle", "Kasimkota"]
+        },
+        {
+          "No": 32,
+          "Name": "Elamanchili",
+          "Mandals": ["Rambilli", "Munagapaka", "Atchutapuram", "Elamanchili"]
+        },
+        {
+          "No": 33,
+          "Name": "Payakaraopet (SC)",
+          "Mandals": ["Kotauratla", "Nakkapalli", "Payakaraopeta", "S.Rayavaram"]
+        },
+        {
+          "No": 34,
+          "Name": "Narsipatnam",
+          "Mandals": ["Nathavaram", "Golugonda", "Narsipatnam", "Makavarapalem"]
+        }
+      ]
+    },
+    {
+      "District": "Alluri Sitharama Raju",
+      "Constituencies": [
+        {
+          "No": 28,
+          "Name": "Araku Valley (ST)",
+          "Mandals": ["Munchingi Puttu", "Peda Bayalu", "Dumbriguda", "Araku Valley", "Hukumpeta", "Ananthagiri"]
+        },
+        {
+          "No": 29,
+          "Name": "Paderu (ST)",
+          "Mandals": ["Paderu", "G.Madugula", "Chintapalli", "Gudem Kotha Veedhi", "Koyyuru"]
+        }
+      ]
+    },
+    {
+      "District": "Kakinada",
+      "Constituencies": [
+        {
+          "No": 35,
+          "Name": "Tuni",
+          "Mandals": ["Thondangi", "Kotananduru", "Tuni"]
+        },
+        {
+          "No": 36,
+          "Name": "Prathipadu (Kakinada)",
+          "Mandals": ["Sankhavaram", "Prathipadu", "Yeleswaram", "Rowthulapudi"]
+        },
+        {
+          "No": 37,
+          "Name": "Pithapuram",
+          "Mandals": ["Gollaprolu", "Pithapuram", "Kothapalle"]
+        },
+        {
+          "No": 38,
+          "Name": "Kakinada Rural",
+          "Mandals": ["Kakinada (urban) mandal (Part) Kakinada(M) Ward No. 66 to 70", "Kakinada Rural", "Karapa"]
+        },
+        {
+          "No": 39,
+          "Name": "Peddapuram",
+          "Mandals": ["Samalkota", "Peddapuram"]
+        },
+        {
+          "No": 41,
+          "Name": "Kakinada City",
+          "Mandals": ["Kakinada (urban) mandal (Part) Kakinada Urban (M)  (Part) Kakinada(M) Ward No. 1 to 65"]
+        },
+        {
+          "No": 52,
+          "Name": "Jaggampeta",
+          "Mandals": ["Gokavaram", "Jaggampeta", "Gandepalle", "Kirlampudi"]
+        }
+      ]
+    },
+    {
+      "District": "East Godavari",
+      "Constituencies": [
+        {
+          "No": 40,
+          "Name": "Anaparthy",
+          "Mandals": ["Pedapudi", "Biccavolu", "Rangampeta", "Anaparthy"]
+        },
+        {
+          "No": 49,
+          "Name": "Rajanagaram",
+          "Mandals": ["Rajanagaram", "Seethanagaram", "Korukonda"]
+        },
+        {
+          "No": 50,
+          "Name": "Rajahmundry City",
+          "Mandals": ["RJY Urban"]
+        },
+        {
+          "No": 51,
+          "Name": "Rajahmundry Rural",
+          "Mandals": ["Kadiam", "Rajahmundry Rural", "Rajahmundry Municipal Corporation (Ward No.1 to 6, 36 to 41 and 90)"]
+        },
+        {
+          "No": 54,
+          "Name": "Kovvur (SC)",
+          "Mandals": ["Kovvur", "Chagallu", "Tallapudi"]
+        },
+        {
+          "No": 55,
+          "Name": "Nidadavole",
+          "Mandals": ["Nidadavole", "Undrajavaram", "Peravali"]
+        },
+        {
+          "No": 66,
+          "Name": "Gopalapuram (SC)",
+          "Mandals": ["Dwaraka Tirumala", "Nallajerla", "Devarapalli", "Gopalapuram"]
+        }
+      ]
+    },
+    {
+      "District": "Konaseema",
+      "Constituencies": [
+        {
+          "No": 42,
+          "Name": "Ramachandrapuram",
+          "Mandals": ["Kajuluru", "Ramachandrapuram", "K.Gangavaram"]
+        },
+        {
+          "No": 43,
+          "Name": "Mummidivaram",
+          "Mandals": ["Island Polavaram", "Mummidivaram", "Thallarevu", "Katrenikona"]
+        },
+        {
+          "No": 44,
+          "Name": "Amalapuram (SC)",
+          "Mandals": ["Uppalaguptam", "Allavaram", "Amalapuram"]
+        },
+        {
+          "No": 45,
+          "Name": "Razole (SC)",
+          "Mandals": ["Razole", "Malikipuram", "Sakhinetipalle", "Mamidikuduru"]
+        },
+        {
+          "No": 46,
+          "Name": "Gannavaram (Konaseema) (SC)",
+          "Mandals": ["P.Gannavaram", "Ambajipeta", "Ainavilli", "Mamidikuduru"]
+        },
+        {
+          "No": 47,
+          "Name": "Kothapeta",
+          "Mandals": ["Ravulapalem", "Kothapeta", "Atreyapuram", "Alamuru"]
+        },
+        {
+          "No": 48,
+          "Name": "Mandapeta",
+          "Mandals": ["Mandapeta", "Rayavaram", "Kapileswarapuram"]
+        }
+      ]
+    },
+    {
+      "District": "West Godavari",
+      "Constituencies": [
+        {
+          "No": 56,
+          "Name": "Achanta",
+          "Mandals": ["Penugonda", "Achanta", "Penumantra", "Poduru"]
+        },
+        {
+          "No": 57,
+          "Name": "Palakollu",
+          "Mandals": ["Palakollu", "Yelamanchili", "Poduru (Part)"]
+        },
+        {
+          "No": 58,
+          "Name": "Narasapuram",
+          "Mandals": ["Mogalthur", "Narsapuram"]
+        },
+        {
+          "No": 59,
+          "Name": "Bhimavaram",
+          "Mandals": ["Bhimavaram mandal\t(Bhimavaram (M+OG), Bhimavaram (M) – Ward No. 1 to 27, China-Amiram (OG) (Part) – Ward No. 28, Rayalam (R) (OG) (Part) – Ward No. 29)", "Veeravasaram"]
+        },
+        {
+          "No": 60,
+          "Name": "Undi",
+          "Mandals": ["Kalla", "Palacoderu", "Undi", "Akividu", "Bhimavaram"]
+        },
+        {
+          "No": 61,
+          "Name": "Tanuku",
+          "Mandals": ["Tanuku", "Attili", "Iragavaram"]
+        },
+        {
+          "No": 62,
+          "Name": "Tadepalligudem",
+          "Mandals": ["Tadepalligudem", "Pentapadu"]
+        }
+      ]
+    },
+    {
+      "District": "Eluru",
+      "Constituencies": [
+        {
+          "No": 63,
+          "Name": "Unguturu",
+          "Mandals": ["Unguturu", "Bhimadole", "Nidamarru", "Ganapavaram"]
+        },
+        {
+          "No": 64,
+          "Name": "Denduluru",
+          "Mandals": ["Denduluru", "Pedavegi", "Pedapadu", "Eluru"]
+        },
+        {
+          "No": 65,
+          "Name": "Eluru",
+          "Mandals": ["Eluru mandal", "Eluru Municipal Corporation (Ward No.1 to 50)"]
+        },
+        {
+          "No": 67,
+          "Name": "Polavaram (ST)",
+          "Mandals": ["Polavaram", "Buttayagudem", "Jeelugumilli", "Koyyalagudem", "T.Narasapuram", "Kukkunoor", "Velerupadu"]
+        },
+        {
+          "No": 68,
+          "Name": "Chintalapudi (SC)",
+          "Mandals": ["Chintalapudi", "Lingapalem", "Kamavarapukota", "Jangareddigudem"]
+        },
+        {
+          "No": 70,
+          "Name": "Nuzvid",
+          "Mandals": ["Agiripalli", "Chatrai", "Musunuru", "Nuzvid"]
+        },
+        {
+          "No": 73,
+          "Name": "Kaikalur",
+          "Mandals": ["Mandavalli", "Kaikalur", "Kalidindi", "Mudinepalle"]
+        }
+      ]
+    },
+    {
+        "District": "NTR",
+        "Constituencies": [
+          {
+            "No": 69,
+            "Name": "Tiruvuru (SC)",
+            "Mandals": ["A. Konduru", "Gampalagudem", "Tiruvuru", "Vissannapet"]
+          },
+          {
+            "No": 79,
+            "Name": "Vijayawada West",
+            "Mandals": ["Vijayawada Urban mandal (Part)", "Vijayawada Municipal Corporation (Ward No. 1 to 13, 15 to 19, 75 and 76)"]
+          },
+          {
+            "No": 80,
+            "Name": "Vijayawada Central",
+            "Mandals": ["Vijayawada Urban mandal (Part)", "Vijayawada Municipal Corporation (Ward No. 14, 20 to 31, 33 to 35, 42 to 44, 49, 77 and 78)"]
+          },
+          {
+            "No": 81,
+            "Name": "Vijayawada East",
+            "Mandals": ["Vijayawada Urban mandal (Part)", "Vijayawada Municipal Corporation (Ward No. 32, 36 to 41, 45 to 48 and 50 to 74)"]
+          },
+          {
+            "No": 82,
+            "Name": "Mylavaram",
+            "Mandals": ["Ibrahimpatnam mandal", "G. Konduru mandal", "Mylavaram mandal", "Reddigudem mandal", "Vijayawada(Rural) mandal"]
+          },
+          {
+            "No": 83,
+            "Name": "Nandigama",
+            "Mandals": ["Kanchikacherla","Chandarlapadu","Veerullapadu","Nandigama (Part)"]
+          },
+          {
+            "No": 84,
+            "Name": "Jagayyapeta",
+            "Mandals": ["Vatsavai","Jaggayyapeta","Penuganchiprolu","Nandigama (Part)"]
+          }
+        ]
+    }
+]
+      
