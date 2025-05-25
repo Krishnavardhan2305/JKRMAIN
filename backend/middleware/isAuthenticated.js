@@ -27,6 +27,7 @@ const Authenticated = async (req, res, next) => {
 
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.id = decoded.id; 
+        console.log("AUthenticated")
         next();
 
     } catch (error) {
