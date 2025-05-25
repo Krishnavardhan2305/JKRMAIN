@@ -14,6 +14,7 @@ app.use(cookieParser());
 
 const allowedOrigins = [
     "http://localhost:5173",
+    "https://jkrmain-nb1j.vercel.app",
     "http://localhost:8080",
 ];
 
