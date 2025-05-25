@@ -1,4 +1,4 @@
-import cloudinary from "../utils/Cloudinary.js";
+import cloudinary from "../utils/cloudinary.js";
 import * as queryService from "../services/queryServices.js";
 import getDataUri from "../utils/getdatauri.js";
 
