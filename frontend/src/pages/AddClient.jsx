@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import constituencyData from '../data/constituencies.json';
-import mandalsJson from '../data/mandals.json';
+import mandalsJson from '../data/Mandals.json';
 import { ADMIN_API_ENDPOINT, CLIENT_API_ENDPOINT } from '../utils/constant';
 
 const AddClient = () => {
