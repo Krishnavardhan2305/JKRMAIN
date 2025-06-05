@@ -49,7 +49,7 @@
       "Constituencies": [
         {
           "No": 9,
-          "Name": "Rajam (SC)",
+          "Name": "Rajam",
           "Mandals": ["Rajam", "Vangara", "Santhakaviti", "Regidi Amadalavalasa"]
         },
         {
@@ -89,22 +89,22 @@
       "Constituencies": [
         {
           "No": 10,
-          "Name": "Palakonda (ST)",
+          "Name": "Palakonda",
           "Mandals": ["Palakonda", "Seethampeta", "Veeraghattam", "Bhamini"]
         },
         {
           "No": 11,
-          "Name": "Kurupam (ST)",
+          "Name": "Kurupam",
           "Mandals": ["Kurupam", "Gummalaxmipuram", "Jiyyammavalasa", "Komarada", "Garugubilli"]
         },
         {
           "No": 12,
-          "Name": "Parvathipuram (SC)",
+          "Name": "Parvathipuram",
           "Mandals": ["Parvathipuram", "Seethanagaram", "Balijipeta"]
         },
         {
           "No": 13,
-          "Name": "Salur (ST)",
+          "Name": "Salur",
           "Mandals": ["Salur", "Pachipenta", "Mentada", "Makkuva"]
         }
       ]

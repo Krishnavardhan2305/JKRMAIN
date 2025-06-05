@@ -1,199 +1,116 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { CLIENT_API_ENDPOINT } from '../utils/constant';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import axios from 'axios';
+import constituencyData from '../data/constituencies.json';
+import mandalsJson from '../data/mandals.json';
+import { ADMIN_API_ENDPOINT, CLIENT_API_ENDPOINT } from '../utils/constant';
 
-const AddCitizen = () => {
+const AddClient = () => {
   const [formData, setFormData] = useState({
     name: '',
     age: '',
     gender: '',
     constituency: '',
     mandal: '',
-    village: '',
-    caste: '',
-    subcaste: '',
-    votedFor: '',
+    Password: '',
+    Mobile: '',
+    Email: '',
+    PoliticalParty: '',
   });
-  const [Loading,setLoading]=useState(false);
+
+  const [availableMandals, setAvailableMandals] = useState([]);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Update mandals when constituency changes
   useEffect(() => {
-    const fetchVolunteerData = async () => {
-      try {
-        const response = await axios.get(`${CLIENT_API_ENDPOINT}/volunteerData`, {
-          withCredentials: true,
-        });
-
-        const { constituency, mandal } = response.data;
-
-        setFormData((prev) => ({
-          ...prev,
-          constituency: constituency || '',
-          mandal: mandal || '',
-        }));
-      } catch (error) {
-        console.error('Error fetching volunteer info:', error);
-      }
-    };
-
-    fetchVolunteerData();
-  }, []);
+    if (formData.constituency && Array.isArray(mandalsJson)) {
+      // Flatten all constituencies from all districts
+      const allConstituencies = mandalsJson.flatMap((district) => district.Constituencies || []);
+      const match = allConstituencies.find((item) => item.Name.trim() === formData.constituency.trim());
+      setAvailableMandals(match ? match.Mandals : []);
+      setFormData((prev) => ({ ...prev, mandal: '' }));
+    } else {
+      setAvailableMandals([]);
+      setFormData((prev) => ({ ...prev, mandal: '' }));
+    }
+  }, [formData.constituency]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       setLoading(true);
-      await axios.post(`${CLIENT_API_ENDPOINT}/addCitizen`, formData, {
++      await axios.post(`${ADMIN_API_ENDPOINT}/addclients`, formData, {
         withCredentials: true,
       });
-      toast.success('Citizen added successfully!');
-      navigate('/VOLUNTEERHOME');
-    } catch (error) {
-      console.error('Error adding citizen:', error);
-      toast.error('Failed to add citizen.');
+      toast.success('Client added successfully!');
+      navigate('/adminHome');
+    } catch (err) {
+      toast.error('Failed to add client.');
+      console.error(err);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center px-4">
-      <div className="w-full max-w-lg p-8 bg-white rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">Add New Citizen</h2>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
+      <div className="w-full max-w-xl p-8 bg-white rounded-xl shadow-2xl text-black">
+        <h2 className="text-3xl font-bold text-center text-blue-700 mb-6">Add New Client</h2>
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* Name */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
 
-          {/* Age */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Age</label>
-            <input
-              type="number"
-              name="age"
-              value={formData.age}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <InputField label="Name" name="name" value={formData.name} onChange={handleChange} />
 
-          {/* Gender */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Gender</label>
-            <select
-              name="gender"
-              value={formData.gender}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 px-4 py-2 rounded-md bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+          <InputField type="number" label="Age" name="age" value={formData.age} onChange={handleChange} />
 
-          {/* Constituency (read-only) */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Constituency</label>
-            <input
-              type="text"
-              name="constituency"
-              value={formData.constituency}
-              readOnly
-              className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-600 cursor-not-allowed"
-            />
-          </div>
+          <SelectField label="Gender" name="gender" value={formData.gender} onChange={handleChange} options={['Male', 'Female', 'Other']} />
 
-          {/* Mandal (read-only) */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Mandal</label>
-            <input
-              type="text"
-              name="mandal"
-              value={formData.mandal}
-              readOnly
-              className="w-full bg-gray-100 border border-gray-300 px-4 py-2 rounded-md text-gray-600 cursor-not-allowed"
-            />
-          </div>
+          {/* Constituency */}
+          <SelectField
+            label="Constituency"
+            name="constituency"
+            value={formData.constituency}
+            onChange={handleChange}
+            options={constituencyData.map((c) => c.ac_name.trim())}
+          />
 
-          {/* Village */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Village</label>
-            <input
-              type="text"
-              name="village"
-              value={formData.village}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {/* Mandal */}
+          <SelectField
+            label="Mandal"
+            name="mandal"
+            value={formData.mandal}
+            onChange={handleChange}
+            options={availableMandals}
+            disabled={!formData.constituency}
+          />
 
-          {/* Caste */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Caste</label>
-            <input
-              type="text"
-              name="caste"
-              value={formData.caste}
-              onChange={handleChange}
-              required
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {/* Password */}
+          <InputField type="password" label="Password" name="Password" value={formData.Password} onChange={handleChange} />
 
-          {/* Subcaste */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Subcaste</label>
-            <input
-              type="text"
-              name="subcaste"
-              value={formData.subcaste}
-              onChange={handleChange}
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {/* Mobile */}
+          <InputField type="tel" label="Mobile" name="Mobile" value={formData.Mobile} onChange={handleChange} />
 
-          {/* Voted For */}
-          <div>
-            <label className="block text-gray-700 font-semibold mb-1">Voted For</label>
-            <input
-              type="text"
-              name="votedFor"
-              value={formData.votedFor}
-              onChange={handleChange}
-              required
-              placeholder="e.g. Party Name or Independent"
-              className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          {/* Email */}
+          <InputField type="email" label="Email" name="Email" value={formData.Email} onChange={handleChange} />
 
-          {/* Submit */}
+          {/* Political Party */}
+          <InputField label="Political Party" name="PoliticalParty" value={formData.PoliticalParty} onChange={handleChange} />
+
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300"
-            disabled={Loading}
+            disabled={loading}
+            className="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow transition duration-300"
           >
-            {
-              Loading?"Adding":"Add Citizen"
-            }
+            {loading ? 'Adding...' : 'Add Client'}
           </button>
         </form>
       </div>
@@ -201,4 +118,37 @@ const AddCitizen = () => {
   );
 };
 
-export default AddCitizen;
+const InputField = ({ label, name, value, onChange, type = 'text' }) => (
+  <div>
+    <label className="block text-gray-700 font-medium mb-1">{label}</label>
+    <input
+      type={type}
+      name={name}
+      value={value}
+      onChange={onChange}
+      required
+      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+    />
+  </div>
+);
+
+const SelectField = ({ label, name, value, onChange, options, disabled = false }) => (
+  <div>
+    <label className="block text-gray-700 font-medium mb-1">{label}</label>
+    <select
+      name={name}
+      value={value}
+      onChange={onChange}
+      required
+      disabled={disabled}
+      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
+    >
+      <option value="">Select {label}</option>
+      {options.map((opt, idx) => (
+        <option key={`${opt}-${idx}`} value={opt}>{opt}</option> 
+      ))}
+    </select>
+  </div>
+);
+
+export default AddClient;
